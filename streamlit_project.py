@@ -117,7 +117,7 @@ def absolute_value(val):
     return f'{a}'  # Display only the number
 
 fig, ax = plt.subplots()
-ax.pie(color_counts, labels=color_counts.index, autopct=absolute_value, startangle=90, colors = colors)
+ax.pie(color_counts, labels=color_counts.index, autopct=absolute_value, startangle=90, colors = colors, textprops={'color': 'white'})
 ax.axis("equal")
 st.pyplot(fig)
 
