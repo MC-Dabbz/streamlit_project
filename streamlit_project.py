@@ -113,7 +113,7 @@ st.pyplot(fig)
 
 # Plot a Pi Chart showing the Colour Distribution
 fig, ax = plt.subplots()
-ax.pie(color_counts, labels=color_counts.index, startangle=90, colors = colors)
+ax.pie(color_counts, labels=color_counts.index, autopct=absolute_value, startangle=90, colors = colors)
 ax.axis("equal")
 st.pyplot(fig)
 
