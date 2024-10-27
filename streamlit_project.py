@@ -18,8 +18,8 @@ df.drop_duplicates(inplace=True)
 df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
 # Title and description
-st.title("Gender and Occupation Insights")
-st.write("This app explores data insights on gender, occupation, and other factors.")
+st.title("Simple Gender Dataset Insights")
+st.write("This app explores various data insights on gender, occupation, age and other factors.")
 
 # Display the dataset
 st.subheader("Dataset Overview")
@@ -59,7 +59,7 @@ st.pyplot(fig)
 st.subheader("Age vs. Income Correlation")
 fig, ax = plt.subplots()
 for gender, group in df.groupby('Gender'):
-    ax.scatter(group['Age'], group['Income_(USD)'], label=gender, alpha=0.6)
+    ax.line(group['Age'], group['Income_(USD)'], label=gender, alpha=0.6)
 ax.set_xlabel("Age")
 ax.set_ylabel("Income (USD)")
 ax.legend(title="Gender")
@@ -70,7 +70,7 @@ st.subheader("Favorite Color Distribution")
 color_counts = df['Favorite_Color'].value_counts()
 st.bar_chart(color_counts)
 
-# Add your bio section here
+# bio
 st.sidebar.title("About Me")
 bio_text = """
 My name is Mumba Chinyanwa, and I am a final-year Physics student at the University of Zambia. 
