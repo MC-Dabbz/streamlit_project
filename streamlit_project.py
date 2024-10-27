@@ -112,9 +112,9 @@ ax.set_ylabel("Number of People")
 st.pyplot(fig)
 
 # Plot a Pi Chart showing the Colour Distribution
- def absolute_value(val):
-        a = int(val / 100. * sum(color_counts))  # Calculate absolute value
-        return f'{a}'  # Display only the number
+def absolute_value(val):
+    a = int(val / 100. * sum(color_counts))  # Calculate absolute value
+    return f'{a}'  # Display only the number
 
 fig, ax = plt.subplots()
 ax.pie(color_counts, labels=color_counts.index, autopct=absolute_value, startangle=90, colors = colors)
