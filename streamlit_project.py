@@ -62,7 +62,7 @@ st.bar_chart(income_by_gender)
 
 # Income Distribution by Marital_Status
 st.subheader("Income Distribution by Marital Status")
-income_by_gender = df.groupby('MArital_Status')['Income_(USD)'].mean()
+income_by_gender = df.groupby('Marital_Status')['Income_(USD)'].mean()
 st.bar_chart(income_by_gender)
 
 
