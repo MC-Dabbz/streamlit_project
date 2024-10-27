@@ -24,7 +24,21 @@ st.write("This app explores data insights on gender, occupation, and other facto
 # Display the dataset
 st.subheader("Dataset Overview")
 st.dataframe(df)
-st.write(f"The Data set has a total of {len(df["Gender"])} people")
+
+# Display information about the Dataset
+st.write(f"The dataset has a total of {len(df)} people.")
+
+# Count by Gender
+male_count = df['Gender'].value_counts().get('male', 0)
+female_count = df['Gender'].value_counts().get('female', 0)
+st.write(f"Number of men: {male_count}")
+st.write(f"Number of women: {female_count}")
+
+# Count by Marital Status
+marital_status_counts = df['Marital_Status'].value_counts()
+st.write(f"Number of married individuals: {marital_status_counts.get('Married', 0)}")
+st.write(f"Number of single individuals: {marital_status_counts.get('Single', 0)}")
+st.write(f"Number of divorced individuals: {marital_status_counts.get('Divorced', 0)}")
 
 # Income Distribution by Gender
 st.subheader("Income Distribution by Gender")
