@@ -18,7 +18,7 @@ df.drop_duplicates(inplace=True)
 df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
 # Title and description
-st.title("Simple Gender Dataset Insights")
+st.title("Simple Gender Dataset")
 st.write("This app explores various data insights on gender, occupation, age and other factors.")
 
 # Display the dataset
@@ -42,7 +42,7 @@ st.write(f"Number of divorced individuals: {marital_status_counts.get('Divorced'
 
 # Income Distribution by Gender
 st.subheader("Income Distribution by Gender")
-income_by_gender = df.groupby('Gender')['Income_(USD)'].mean()
+income_by_gender = df.groupby('Age')['Income_(USD)'].mean()
 st.bar_chart(income_by_gender)
 
 # Height vs. Weight by Gender
