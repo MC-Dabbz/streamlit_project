@@ -127,7 +127,7 @@ st.sidebar.title("About Me")
 bio_text = """
 My name is Mumba Chinyanwa, and I am a final-year Physics student at the University of Zambia. 
 Currently, I am also participating in the DARA Astronomy Basic Training Program.\n
-To apply the skills I learned in the Computer Training Unit, I am developing this app on Streamlit, 
+To apply the skills I learnt in the Computer Training Unit, I am developing this app on Streamlit, 
 which draws various insights from a simple gender classification dataset. 
 As my skills improve over time, I hope to continue enhancing it.
 """
