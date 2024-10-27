@@ -74,10 +74,10 @@ st.bar_chart(color_counts)
 st.sidebar.title("About Me")
 bio_text = """
 My name is Mumba Chinyanwa, and I am a final-year Physics student at the University of Zambia. 
-Currently, I am also participating in the DARA Astronomy Basic Training Program. 
+Currently, I am also participating in the DARA Astronomy Basic Training Program.\n
 To apply the skills I learned in the Computer Training Unit, I am developing this app on Streamlit, 
 which draws various insights from a simple gender classification dataset. 
-As my skills improve over time, I hope to continue enhancing it. 
+As my skills improve over time, I hope to continue enhancing it. \n
 I have always been passionate about Science and Mathematics, particularly Astrophysics, 
 and I aspire to become a bona fide astrophysicist one day.
 """
