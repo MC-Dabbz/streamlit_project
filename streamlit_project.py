@@ -92,6 +92,14 @@ st.subheader("Favorite Color Distribution")
 color_counts = df['Favorite_Color'].value_counts()
 st.bar_chart(color_counts)
 
+# pi chart attempt
+color_counts = df['Favorite_Color'].value_counts()
+
+fig, ax = plt.subplots()
+ax.pie(color_counts, labels=color_counts.index, autopct='%1.1f%%', startangle=90)
+ax.axis("equal")
+st.pyplot(fig)
+
 # bio
 st.sidebar.title("About Me")
 bio_text = """
