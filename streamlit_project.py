@@ -72,4 +72,13 @@ st.bar_chart(color_counts)
 
 # Add your bio section here
 st.sidebar.title("About Me")
-st.sidebar.write("Your bio goes here. Briefly describe yourself and your research interests.")
+bio_text = """
+My name is Mumba Chinyanwa, and I am a final-year Physics student at the University of Zambia. 
+Currently, I am also participating in the DARA Astronomy Basic Training Program. 
+To apply the skills I learned in the Computer Training Unit, I am developing this app on Streamlit, 
+which draws various insights from a simple gender classification dataset. 
+As my skills improve over time, I hope to continue enhancing it. 
+I have always been passionate about Science and Mathematics, particularly Astrophysics, 
+and I aspire to become a bona fide astrophysicist one day.
+"""
+st.sidebar.write(bio_text)
