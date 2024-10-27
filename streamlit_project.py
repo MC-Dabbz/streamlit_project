@@ -24,6 +24,7 @@ st.write("This app explores data insights on gender, occupation, and other facto
 # Display the dataset
 st.subheader("Dataset Overview")
 st.dataframe(df)
+st.write(f"The Data set has a total of {len(df["Gender"]) people}")
 
 # Income Distribution by Gender
 st.subheader("Income Distribution by Gender")
