@@ -59,7 +59,7 @@ st.pyplot(fig)
 st.subheader("Age vs. Income Correlation")
 fig, ax = plt.subplots()
 for gender, group in df.groupby('Gender'):
-    ax.plot(group['Age'], group['Income_(USD)'], label=gender, alpha=0.6)
+    ax.scatter(group['Age'], group['Income_(USD)'], label=gender, alpha=0.6)
 ax.set_xlabel("Age")
 ax.set_ylabel("Income (USD)")
 ax.legend(title="Gender")
