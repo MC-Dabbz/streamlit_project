@@ -15,7 +15,7 @@ df = pd.read_csv("gender.csv")
 df.columns = df.columns.str.lstrip().str.replace(' ', '_', regex=True)
 df.drop(columns=['Unnamed:_9'], inplace=True)
 df.drop_duplicates(inplace=True)
-df['Gender'] = df['Gender'].str.strip()
+df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
 # Title and description
 st.title("Gender and Occupation Insights")
