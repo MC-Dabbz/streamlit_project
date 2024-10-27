@@ -15,6 +15,7 @@ df = pd.read_csv("gender.csv")
 df.columns = df.columns.str.lstrip().str.replace(' ', '_', regex=True)
 df.drop(columns=['Unnamed:_9'], inplace=True)
 df.drop_duplicates(inplace=True)
+df['Gender'] = df['Gender'].str.strip()
 
 # Title and description
 st.title("Gender and Occupation Insights")
