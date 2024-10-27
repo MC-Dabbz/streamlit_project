@@ -94,9 +94,21 @@ st.bar_chart(color_counts)
 
 # pi chart attempt
 color_counts = df['Favorite_Color'].value_counts()
+color_map = {
+        'Red': 'red',
+        'Blue': 'blue',
+        'Green': 'green',
+        'Yellow': 'yellow',
+        'Orange': 'orange',
+        'Black': 'black',
+        'Grey': 'grey',
+        'Pink': 'pink',
+        'Purple': 'purple'
+    }
+colors = [color_map[color] for color in color_counts.index]
 
 fig, ax = plt.subplots()
-ax.pie(color_counts, labels=color_counts.index, autopct='%1.1f%%', startangle=90)
+ax.pie(color_counts, labels=color_counts.index, autopct='%1.1f%%', startangle=90, colors = colors)
 ax.axis("equal")
 st.pyplot(fig)
 
