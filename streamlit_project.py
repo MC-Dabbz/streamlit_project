@@ -42,7 +42,27 @@ st.write(f"Number of divorced individuals: {marital_status_counts.get('Divorced'
 
 # Income Distribution by Gender
 st.subheader("Income Distribution by Gender")
+income_by_gender = df.groupby('Gender')['Income_(USD)'].mean()
+st.bar_chart(income_by_gender)
+
+# Income Distribution by Age
+st.subheader("Income Distribution by Age")
+income_by_gender = df.groupby('Age')['Income_(USD)'].mean()
+st.bar_chart(income_by_gender)
+
+# Income Distribution by Occupation
+st.subheader("Income Distribution by Occupation")
+income_by_gender = df.groupby('Occupation')['Income_(USD)'].mean()
+st.bar_chart(income_by_gender)
+
+# Income Distribution by Education_Level
+st.subheader("Income Distribution by Education Level")
 income_by_gender = df.groupby('Education_Level')['Income_(USD)'].mean()
+st.bar_chart(income_by_gender)
+
+# Income Distribution by Marital_Status
+st.subheader("Income Distribution by Marital Status")
+income_by_gender = df.groupby('MArital_Status')['Income_(USD)'].mean()
 st.bar_chart(income_by_gender)
 
 
