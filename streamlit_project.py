@@ -108,10 +108,19 @@ ax.pie(color_counts, labels=color_counts.index, startangle=90, colors = colors)
 ax.axis("equal")
 st.pyplot(fig)
 
+fig, ax = plt.subplots()
+    ax.bar(color_counts.index, color_counts.values, color=colors)
+    ax.set_title("Favorite Colors Distribution")
+    ax.set_xlabel("Color")
+    ax.set_ylabel("Number of People")
+
+    # Display the bar chart in Streamlit
+    st.pyplot(fig)
+
 # Favorite Color Distribution
 st.subheader("Favorite Color Distribution")
 color_counts = df['Favorite_Color'].value_counts()
-st.bar_chart(color_counts, colors = colors)
+st.bar_chart(color_counts)
 
 
 # bio
