@@ -108,7 +108,7 @@ color_map = {
 colors = [color_map[color] for color in color_counts.index]
 
 fig, ax = plt.subplots()
-ax.pie(color_counts, labels=color_counts.index, autopct='%1.1f%%', startangle=90, colors = colors)
+ax.pie(color_counts, labels=color_counts.index, startangle=90, colors = colors)
 ax.axis("equal")
 st.pyplot(fig)
 
