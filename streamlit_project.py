@@ -87,10 +87,6 @@ ax.set_ylabel("Income (USD)")
 ax.legend(title="Gender")
 st.pyplot(fig)
 
-# Favorite Color Distribution
-st.subheader("Favorite Color Distribution")
-color_counts = df['Favorite_Color'].value_counts()
-st.bar_chart(color_counts)
 
 # pi chart attempt
 color_counts = df['Favorite_Color'].value_counts()
@@ -111,6 +107,12 @@ fig, ax = plt.subplots()
 ax.pie(color_counts, labels=color_counts.index, startangle=90, colors = colors)
 ax.axis("equal")
 st.pyplot(fig)
+
+# Favorite Color Distribution
+st.subheader("Favorite Color Distribution")
+color_counts = df['Favorite_Color'].value_counts()
+st.bar_chart(color_counts, colors = colors)
+
 
 # bio
 st.sidebar.title("About Me")
